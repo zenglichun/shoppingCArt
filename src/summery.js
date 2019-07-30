@@ -1,16 +1,19 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
 
+const block= {
+    clear:"both",
+    margin:"10px",
+    color:"red"
+}
 class Summery extends Component{
 
     render(){
-        const block= {
-            clear:"both",
-            margin:"10px",
-            color:"red"
-        }
+
         return(
-            <div style={block}>总计：￥{this.props.goodsArr[0].sum}</div>
+            <div style={block}>总计：￥{this.props.goodsArr.reduce((total, e) => {
+                return total + ( e.checked ? e.num * e.goodPrice : 0 )
+            }, 0)}</div>
         )
         
     }
@@ -18,7 +21,7 @@ class Summery extends Component{
 
 function mapStateToProps(state){
     return {
-        goodsArr: state
+        goodsArr: state.list
     }
 }
 
