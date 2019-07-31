@@ -3,3 +3,4 @@ export const Sub = (idx) => ({ type: 'subOne', idx});
 export const Check = (idx) => ({type: 'checkValue', idx});
 export const AddToShoppingCart = (idx) => ({type: 'addTo', idx});
 export const ToDetail = (idx) => ({type: 'toDetail', idx});
+export const Delect = (idx) => ({type: 'delect', idx});

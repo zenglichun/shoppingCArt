@@ -2,14 +2,23 @@ import React, {Component} from "react";
 import {Link} from "react-router-dom";
 import {connect} from "react-redux";
 import Summery from "./summery"
-import { Add, Sub, Check, ToDetail } from "./action"
+import { Add, Sub, Check, ToDetail,Delect } from "./action"
+import delect from "./delect.png"
 
 const divBox = {
     float:"left",
     width:"250px",
     height:"330px",
     margin:"10px",
-    border:"1px solid grey"
+    border:"1px solid grey",
+    position:"relative"
+}
+const delectStyle = {
+    width:"20px",
+    height:"20px",
+    position:"absolute",
+    right:"-5px",
+    top:"-5px"
 }
 const imgStyle = {
     width:"250px",
@@ -57,6 +66,9 @@ class ShoppingCart extends Component{
     toDetail = (index) => {
         this.props.ToDetail(index);
     }
+    delect = (index) => {
+        this.props.Delect(index);
+    }
     render(){       
         // let msg = [];
         // let htmlArr = [];
@@ -93,6 +105,7 @@ class ShoppingCart extends Component{
                    return(
                         <div style = {divBox} key = {index}>
                             <input type="checkbox" checked={item.checked} onChange = {this.check.bind(this, index)}/>
+                            <img alt="图片加载失败" src={delect} style = {delectStyle} onClick = {this.delect.bind(this,index)}/>
                             <img alt="图片加载失败" src={item.imgSrc} style = {imgStyle} />
                             <div style = {divStyle}>
                                 <span>{item.goodName}</span>
@@ -129,5 +142,6 @@ export default ShoppingCart = connect(mapStateToProps, {
     Add,
     Sub,
     Check,
-    ToDetail
+    ToDetail,
+    Delect
 })(ShoppingCart);

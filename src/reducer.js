@@ -157,7 +157,6 @@ const reducer = (state = initState, action) => {
             {
                 const target = state.list[action.idx];
                 const good = Object.assign({}, target, { num: target.num + 1 })
-                // console.log(state.list[action.idx].num)
                 const list = [].concat(state.list);
                 list.splice(action.idx, 1, good);
                 return { ...state, list };
@@ -171,6 +170,14 @@ const reducer = (state = initState, action) => {
                 console.log(initState.detail)
                 return { ...state,detail}
 
+            }
+        case "delect":
+            {
+                const target = state.list[action.idx];
+                const good = Object.assign({},target,{num: 0});
+                const list = [].concat(state.list);
+                list.splice(action.idx,1,good);
+                return { ...state, list };
             }
             
         default:
