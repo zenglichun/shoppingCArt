@@ -100,7 +100,7 @@ class ShoppingCart extends Component{
             <div>
                 {goodsArr.list.map((item, index) => {
                     if(item.num === 0){
-                        return
+                        return null
                     }
                    return(
                         <div style = {divBox} key = {index}>

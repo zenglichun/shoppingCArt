@@ -3,16 +3,24 @@ import {Link} from "react-router-dom";
 
 const aStyle = {
     textDecoration:"none",
-    color:"black"
+    color:"#444444"
   }
   const ulStyle = {
-    clear:"both",
+    // clear:"both",
     display:"flex",  
+    background:"#cccccc",
+    height:"60px",
+    marginBlockStart:"0",
+    paddingInlineStart:"0"
   }
   const liStyle = {
     listStyleType:"none",
-    width:"150px",
-    height:"30px",
+    width:"25%",
+    height:"60px",
+    lineHeight:"60px",
+    fontSize:"30px",
+    textAlign:"center",
+    color:"#666666"
   }
 const nav = () => {
     return (
