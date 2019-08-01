@@ -1,11 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css';
+import './index.css'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
 import reducer from './reducer'
 import Routes from "./Routes"
+import { nav as NavBar } from "./navBar"
 import * as serviceWorker from './serviceWorker'
 
 const store = createStore(reducer);
@@ -18,6 +19,7 @@ const store = createStore(reducer);
 // }
 ReactDOM.render(
     <Provider store={store}>
+        <NavBar/>
         <Routes />  
         {/* <div style={divStyle}></div>   */}
     </Provider>,  
