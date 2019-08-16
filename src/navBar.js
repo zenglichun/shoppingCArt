@@ -4,7 +4,7 @@ import { history } from "./utils.js";
 
 
 import "./style.css"
->>>>>>> remotes/origin/second
+
 
 const aStyle = {
     textDecoration:"none",
@@ -30,25 +30,6 @@ const aStyle = {
  
 const nav = () => {
     return (
-<<<<<<< HEAD
-        <Router history={history}>
-            {/* <Switch> */}
-                <ul style={ulStyle}>
-                    <li style={liStyle}>
-                        <NavLink to="/" exact style={aStyle}>主页</NavLink>
-                    </li>
-                    <li style={liStyle}>
-                        <NavLink to="/shoppingCart" style={aStyle}>购物车</NavLink>
-                    </li>
-                    <li style={liStyle}>
-                        <NavLink to="/message" style={aStyle}>信息</NavLink>
-                    </li>
-                    <li style={liStyle}>
-                        <NavLink to="/mine" style={aStyle}>我的</NavLink>
-                    </li>
-                </ul>
-            {/* </Switch> */}
-=======
         <Router history={history}>          
             <ul style={ulStyle}>
                 <li style={liStyle}>
@@ -64,7 +45,6 @@ const nav = () => {
                     <NavLink to="/mine" style={aStyle}>我的</NavLink>
                 </li>
             </ul>
->>>>>>> remotes/origin/second
         </Router>  
     )
 }
