@@ -1,6 +1,7 @@
 import React from "react";
-import { Router,Link } from "react-router-dom";
+import { Router,NavLink } from "react-router-dom";
 import { history } from "./utils.js";
+require("./style.css")
 
 const aStyle = {
     textDecoration:"none",
@@ -23,23 +24,26 @@ const aStyle = {
     textAlign:"center",
     color:"#666666"
   }
+ 
 const nav = () => {
     return (
         <Router history={history}>
-            <ul style={ulStyle}>
-                <li style={liStyle}>
-                    <Link to="/" style={aStyle}>主页</Link>
-                </li>
-                <li style={liStyle}>
-                    <Link to="/shoppingCart" style={aStyle}>购物车</Link>
-                </li>
-                <li style={liStyle}>
-                    <Link to="/message" style={aStyle}>信息</Link>
-                </li>
-                <li style={liStyle}>
-                    <Link to="/mine" style={aStyle}>我的</Link>
-                </li>
-            </ul>
+            {/* <Switch> */}
+                <ul style={ulStyle}>
+                    <li style={liStyle}>
+                        <NavLink to="/" exact style={aStyle}>主页</NavLink>
+                    </li>
+                    <li style={liStyle}>
+                        <NavLink to="/shoppingCart" style={aStyle}>购物车</NavLink>
+                    </li>
+                    <li style={liStyle}>
+                        <NavLink to="/message" style={aStyle}>信息</NavLink>
+                    </li>
+                    <li style={liStyle}>
+                        <NavLink to="/mine" style={aStyle}>我的</NavLink>
+                    </li>
+                </ul>
+            {/* </Switch> */}
         </Router>  
     )
 }
