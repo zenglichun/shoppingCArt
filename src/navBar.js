@@ -1,6 +1,7 @@
 import React from "react";
-import { Router,Link } from "react-router-dom";
+import { Router,NavLink } from "react-router-dom";
 import { history } from "./utils.js";
+import "./style.css"
 
 const aStyle = {
     textDecoration:"none",
@@ -25,19 +26,19 @@ const aStyle = {
   }
 const nav = () => {
     return (
-        <Router history={history}>
+        <Router history={history}>          
             <ul style={ulStyle}>
                 <li style={liStyle}>
-                    <Link to="/" style={aStyle}>主页</Link>
+                    <NavLink to="/" exact style={aStyle}>主页</NavLink>
                 </li>
                 <li style={liStyle}>
-                    <Link to="/shoppingCart" style={aStyle}>购物车</Link>
+                    <NavLink to="/shoppingCart" style={aStyle}>购物车</NavLink>
                 </li>
                 <li style={liStyle}>
-                    <Link to="/message" style={aStyle}>信息</Link>
+                    <NavLink to="/message" style={aStyle}>信息</NavLink>
                 </li>
                 <li style={liStyle}>
-                    <Link to="/mine" style={aStyle}>我的</Link>
+                    <NavLink to="/mine" style={aStyle}>我的</NavLink>
                 </li>
             </ul>
         </Router>  
