@@ -25,7 +25,6 @@ const aStyle = {
     color:"#666666"
   }
 
-  console.log("我变了")
 const nav = () => {
     return (
         
