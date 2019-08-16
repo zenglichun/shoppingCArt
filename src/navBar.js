@@ -24,8 +24,11 @@ const aStyle = {
     textAlign:"center",
     color:"#666666"
   }
+
+  console.log("我变了")
 const nav = () => {
     return (
+        
         <Router history={history}>          
             <ul style={ulStyle}>
                 <li style={liStyle}>
