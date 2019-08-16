@@ -1,10 +1,7 @@
 import React from "react";
 import { Router,NavLink } from "react-router-dom";
 import { history } from "./utils.js";
-
-
 import "./style.css"
-
 
 const aStyle = {
     textDecoration:"none",
