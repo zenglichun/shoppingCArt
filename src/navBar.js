@@ -8,7 +8,6 @@ const aStyle = {
     color:"#444444"
   }
   const ulStyle = {
-    // clear:"both",
     display:"flex",  
     background:"#cccccc",
     height:"60px",
